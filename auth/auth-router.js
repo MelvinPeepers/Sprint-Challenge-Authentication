@@ -33,10 +33,11 @@ router.post("/login", (req, res) => {
     .then(user => {
       if (user && bcrypt.compareSync(password, user.password)) {
         // a jwt should be generated
-        const toke = generateToken(user);
+        const token = generateToken(user);
         // console.log('token', token);
+        console.log(user.username);
         res.status(200).json({
-          message: "Welcome ${user.username}",
+          message: `Welcome ${user.username}!`,
           token
         });
       } else {
@@ -47,6 +48,7 @@ router.post("/login", (req, res) => {
       res.status(500).json(error);
     });
 });
+// tested localhost:5000/api/auth/login in Insomia
 
 function generateToken(user) {
   // header payload and verify signature

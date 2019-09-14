@@ -10,5 +10,6 @@ router.get("/", (req, res) => {
     })
     .catch(error => res.send(error));
 });
+// localhost:5000/api/users tested in Insomia
 
 module.exports = router;
