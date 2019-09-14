@@ -21,12 +21,12 @@ Follow these steps to set up and work on your project:
 - [x] Clone your forked version of the Repository.
 - [x] Create a new Branch on the clone: git checkout -b `firstName-lastName`.
 - [x] Implement the project on this Branch, committing changes regularly.
-- [ ] Push commits: git push origin `firstName-lastName`.
+- [x] Push commits: git push origin `firstName-lastName`.
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge `firstName-lastName` branch into `master` on your fork. **Please don't make Pull Requests against Lambda's repository**.
-- [ ] Please don't merge your own pull request.
+- [x] Submit a Pull-Request to merge `firstName-lastName` branch into `master` on your fork. **Please don't make Pull Requests against Lambda's repository**.
+- [x] Please don't merge your own pull request.
 - [ ] Add your _Team Lead_ as a Reviewer on the Pull-request
 - [ ] Your _Team Lead_ will count the challenge as done by merging the branch into _master_.
 
@@ -40,11 +40,19 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 - [ ] What is the purpose of using _sessions_?
 
+\*\*\*\* Sessions are commonly used to allow a server to store information about a client. Sessions also provide a way to persist data across requests.
+
 - [ ] What does bcrypt do to help us store passwords in a secure manner.
+
+\*\*\*\* Bcrypt is a popular library for hashing text. Bcrypt generates a hash from the password so you can store the hash.
 
 - [ ] What does bcrypt do to slow down attackers?
 
+\*\*\*\* Bcrypt adds time to the security algorithm to produce a Key Derivation Function.
+
 - [ ] What are the three parts of the JSON Web Token?
+
+\*\*\*\* The three parts of the JSON Web Token are, Header, Payload and Signature.
 
 ## Minimum Viable Product
 
