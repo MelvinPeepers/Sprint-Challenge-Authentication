@@ -1,10 +1,23 @@
 const server = require("../api/server.js");
 const request = require("supertest");
+const db = require("../database/dbConfig.js");
 
-it("should return status 200", () => {
-  return request(server)
-    .get("/")
-    .then(res => {
-      expect(res.status).toBe(200);
-    });
+// describe("GET /", () => {
+//   it('has process.env.DB_ENV as "testing"', () => {
+//     expect(process.env.DB_ENV).toBe("testing");
+//   });
+// });
+
+describe("POST /register", () => {
+  it("should return JSON", () => {
+    return request(server)
+      .post("/api/auth/register")
+      .send({
+        username: "Serenity",
+        password: "abc12d3"
+      })
+      .then(res => {
+        expect(res.type).toMatch(/json/);
+      });
+  });
 });
