@@ -35,7 +35,6 @@ router.post("/login", (req, res) => {
         // a jwt should be generated
         const token = generateToken(user);
         // console.log('token', token);
-        console.log(user.username);
         res.status(200).json({
           message: `Welcome ${user.username}!`,
           token
